@@ -24,6 +24,8 @@
 
 - Paquete `dotenv` usando `npm i dotenv` desde `https://www.npmjs.com/package/dotenv`
 
+- Paquete `env-var` usando `npm i env-var` desde `https://www.npmjs.com/package/env-var`
+
 - Paquete `nombre_paquete` usando `comando_paquete` desde `url_paquete`
 
 ### \* NOTAS:
