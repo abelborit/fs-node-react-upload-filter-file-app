@@ -22,7 +22,7 @@
 
   - Para los tipos `npm i --save-dev @types/express`
 
-- Paquete `nombre_paquete` usando `comando_paquete` desde `url_paquete`
+- Paquete `dotenv` usando `npm i dotenv` desde `https://www.npmjs.com/package/dotenv`
 
 - Paquete `nombre_paquete` usando `comando_paquete` desde `url_paquete`
 
