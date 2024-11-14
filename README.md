@@ -26,6 +26,12 @@
 
 - Paquete `env-var` usando `npm i env-var` desde `https://www.npmjs.com/package/env-var`
 
+- Paquete `multer` usando `npm i multer` desde `https://www.npmjs.com/package/multer`
+
+  - Para los tipos `npm i --save-dev @types/multer`
+
+- Paquete `convert-csv-to-json` usando `npm i convert-csv-to-json` desde `https://www.npmjs.com/package/convert-csv-to-json`
+
 - Paquete `nombre_paquete` usando `comando_paquete` desde `url_paquete`
 
 ### \* NOTAS:
