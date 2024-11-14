@@ -8,7 +8,7 @@ export class FileUploadRoutes {
 
     const fileUploadController = new FileUploadController();
 
-    router.post("/single/", fileUploadController.uploadSingleFile);
+    router.post("/single", fileUploadController.uploadSingleFile);
 
     return router;
   }
