@@ -18,8 +18,12 @@
 
 ### \* RECURSOS A USAR:
 
+- Paquete `express` usando `npm i express` desde `https://www.npmjs.com/package/express`
+
+  - Para los tipos `npm i --save-dev @types/express`
+
 - Paquete `nombre_paquete` usando `comando_paquete` desde `url_paquete`
-- Paquete `nombre_paquete` usando `comando_paquete` desde `url_paquete`
+
 - Paquete `nombre_paquete` usando `comando_paquete` desde `url_paquete`
 
 ### \* NOTAS:
