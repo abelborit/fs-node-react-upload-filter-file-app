@@ -1,0 +1,101 @@
+id,nombre,apellido,edad,departamento,email
+1,Ana,Gomez,27,Desarrollo,ana.gomez@example.com
+2,Carlos,Martinez,35,Marketing,carlos.martinez@example.com
+3,Lucia,Fernandez,29,Ventas,lucia.fernandez@example.com
+4,Pedro,Lopez,45,Recursos Humanos,pedro.lopez@example.com
+5,Mariana,Garcia,32,Desarrollo,mariana.garcia@example.com
+6,Javier,Hernandez,41,Administración,javier.hernandez@example.com
+7,Laura,Sanchez,28,Marketing,laura.sanchez@example.com
+8,Jose,Diaz,38,Ventas,jose.diaz@example.com
+9,Sofia,Ramos,24,Recursos Humanos,sofia.ramos@example.com
+10,Diego,Romero,37,Desarrollo,diego.romero@example.com
+11,Maria,Morales,30,Administración,maria.morales@example.com
+12,Juan,Cruz,42,Ventas,juan.cruz@example.com
+13,Elena,Mendoza,33,Marketing,elena.mendoza@example.com
+14,Roberto,Flores,44,Recursos Humanos,roberto.flores@example.com
+15,Daniela,Castillo,26,Desarrollo,daniela.castillo@example.com
+16,Andres,Ruiz,31,Administración,andres.ruiz@example.com
+17,Camila,Rivera,25,Marketing,camila.rivera@example.com
+18,Ignacio,Ortega,39,Ventas,ignacio.ortega@example.com
+19,Natalia,Guerrero,36,Recursos Humanos,natalia.guerrero@example.com
+20,Francisco,Vega,29,Desarrollo,francisco.vega@example.com
+21,Paula,Molina,43,Administración,paula.molina@example.com
+22,Felipe,Rodriguez,34,Marketing,felipe.rodriguez@example.com
+23,Victoria,Chavez,27,Ventas,victoria.chavez@example.com
+24,Fernando,Soto,46,Recursos Humanos,fernando.soto@example.com
+25,Adriana,Ramos,28,Desarrollo,adriana.ramos@example.com
+26,Oscar,Blanco,37,Administración,oscar.blanco@example.com
+27,Ines,Ortega,30,Marketing,ines.ortega@example.com
+28,Raul,Perez,40,Ventas,raul.perez@example.com
+29,Patricia,Guzman,35,Recursos Humanos,patricia.guzman@example.com
+30,Ricardo,Nunez,41,Desarrollo,ricardo.nunez@example.com
+31,Valentina,Salazar,32,Administración,valentina.salazar@example.com
+32,Eduardo,Jimenez,28,Marketing,eduardo.jimenez@example.com
+33,Sandra,Romero,38,Ventas,sandra.romero@example.com
+34,Gustavo,Ferreira,44,Recursos Humanos,gustavo.ferreira@example.com
+35,Isabel,Lara,33,Desarrollo,isabel.lara@example.com
+36,Guillermo,Rojas,26,Administración,guillermo.rojas@example.com
+37,Rebeca,Mejia,30,Marketing,rebeca.mejia@example.com
+38,Cesar,Murillo,39,Ventas,cesar.murillo@example.com
+39,Monica,Cabrera,34,Recursos Humanos,monica.cabrera@example.com
+40,Antonio,Pena,45,Desarrollo,antonio.pena@example.com
+41,Patricio,Lozano,27,Desarrollo,patricio.lozano@example.com
+42,Carolina,Reyes,34,Marketing,carolina.reyes@example.com
+43,Miguel,Correa,31,Ventas,miguel.correa@example.com
+44,Susana,Paredes,44,Recursos Humanos,susana.paredes@example.com
+45,Emilio,Gallardo,29,Desarrollo,emilio.gallardo@example.com
+46,Angela,Santana,38,Administración,angela.santana@example.com
+47,Fernanda,Rosales,25,Marketing,fernanda.rosales@example.com
+48,Hugo,Acosta,41,Ventas,hugo.acosta@example.com
+49,Veronica,Miranda,32,Recursos Humanos,veronica.miranda@example.com
+50,Rafael,Vargas,36,Desarrollo,rafael.vargas@example.com
+51,Pablo,Esquivel,45,Administración,pablo.esquivel@example.com
+52,Lorena,Ibanez,28,Marketing,lorena.ibanez@example.com
+53,Manuel,Paz,40,Ventas,manuel.paz@example.com
+54,Elisa,Torres,33,Recursos Humanos,elisa.torres@example.com
+55,Victor,Benitez,30,Desarrollo,victor.benitez@example.com
+56,Noelia,Solar,24,Administración,noelia.solar@example.com
+57,Renato,Prieto,35,Marketing,renato.prieto@example.com
+58,Belinda,Quintero,39,Ventas,belinda.quintero@example.com
+59,Martina,Ruiz,29,Recursos Humanos,martina.ruiz@example.com
+60,Eduardo,Ortiz,43,Desarrollo,eduardo.ortiz@example.com
+61,Cristina,Figueroa,26,Administración,cristina.figueroa@example.com
+62,Saul,Moreno,38,Marketing,saul.moreno@example.com
+63,Alma,Olivares,27,Ventas,alma.olivares@example.com
+64,Esteban,Serrano,46,Recursos Humanos,esteban.serrano@example.com
+65,Yolanda,Cortes,31,Desarrollo,yolanda.cortes@example.com
+66,Marcos,Valencia,42,Administración,marcos.valencia@example.com
+67,Barbara,Lagos,34,Marketing,barbara.lagos@example.com
+68,Sebastian,Flores,28,Ventas,sebastian.flores@example.com
+69,Liliana,Villalobos,37,Recursos Humanos,liliana.villalobos@example.com
+70,Ramon,Mendoza,30,Desarrollo,ramon.mendoza@example.com
+71,Silvia,Gonzalez,43,Administración,silvia.gonzalez@example.com
+72,Alberto,Sandoval,29,Marketing,alberto.sandoval@example.com
+73,Lucia,Perez,45,Ventas,lucia.perez@example.com
+74,Joaquin,Mora,33,Recursos Humanos,joaquin.mora@example.com
+75,Beatriz,Roldan,26,Desarrollo,beatriz.roldan@example.com
+76,Ignacia,Martinez,41,Administración,ignacia.martinez@example.com
+77,Leonardo,Escobar,32,Marketing,leonardo.escobar@example.com
+78,Victoria,Aguilar,36,Ventas,victoria.aguilar@example.com
+79,Maria,Baeza,40,Recursos Humanos,maria.baeza@example.com
+80,Alfonso,Zapata,28,Desarrollo,alfonso.zapata@example.com
+81,Estela,Valverde,27,Desarrollo,estela.valverde@example.com
+82,Raul,Bustamante,35,Marketing,raul.bustamante@example.com
+83,Diana,Ramirez,29,Ventas,diana.ramirez@example.com
+84,Fabian,Campos,42,Recursos Humanos,fabian.campos@example.com
+85,Alejandra,Cano,33,Desarrollo,alejandra.cano@example.com
+86,Tomás,Andrade,44,Administración,tomas.andrade@example.com
+87,Gloria,Munoz,30,Marketing,gloria.munoz@example.com
+88,Alfredo,Brito,39,Ventas,alfredo.brito@example.com
+89,Pamela,Navarro,26,Recursos Humanos,pamela.navarro@example.com
+90,Bruno,Rivas,34,Desarrollo,bruno.rivas@example.com
+91,Isabel,Saavedra,31,Administración,isabel.saavedra@example.com
+92,Gerardo,Araya,28,Marketing,gerardo.araya@example.com
+93,Carla,Delgado,37,Ventas,carla.delgado@example.com
+94,Esteban,Loyola,41,Recursos Humanos,esteban.loyola@example.com
+95,Luis,Pineda,25,Desarrollo,luis.pineda@example.com
+96,Antonia,Rojas,40,Administración,antonia.rojas@example.com
+97,Ricardo,Valdes,33,Marketing,ricardo.valdes@example.com
+98,Sofia,Jimenez,30,Ventas,sofia.jimenez@example.com
+99,Hernan,Barrera,36,Recursos Humanos,hernan.barrera@example.com
+100,Melisa,Bravo,32,Desarrollo,melisa.bravo@example.com
