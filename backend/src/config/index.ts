@@ -1,1 +1,2 @@
-export * from "./envs.plugin"
+export * from "./envs.plugin";
+export * from "./multer.adapter";
