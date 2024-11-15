@@ -4,12 +4,16 @@ import { MulterAdapter } from "../../config";
 import { FileUploadService } from "../services/file-upload.service";
 
 export class FileUploadRoutes {
-  /* aquí se utiliza static functions porque como no se hará inyección de dependencias entonces no sería necesario instsanciar la clase AppRoutes y solo se coloca directo. También se están usando el get function para tener otra forma de realizar esta función, se podría realizar sin ese get (son solo diferentes formas de hacerlo) */
-  static get routes(): Router {
+  constructor(private fileUploadService: FileUploadService) {}
+
+  /* se quita static para facilitar la inyección de dependencias. Al quitar el static, se puede realizar la inyección de dependencias más fácilmente, en este caso, para pasar las instancias de los servicios directamente a través del constructor, lo que mejora la flexibilidad de la aplicación y facilita la reutilización de las instancias de los servicios */
+  /* Cuando se utiliza el modificador static en un método, el método se vuelve estático, lo que significa que no se necesita crear una instancia de la clase para llamar al método. Esto es útil si no se necesita dependencias dinámicas. Sin embargo, en el caso de que se quiera inyectar dependencias (como en este caso, las instancias de FileUploadService y UsersService), eliminando static nos permite que el constructor reciba las dependencias que se necesita para crear las rutas */
+  public get routes(): Router {
     const router = Router();
 
-    const fileUploadService = new FileUploadService();
-    const fileUploadController = new FileUploadController(fileUploadService);
+    const fileUploadController = new FileUploadController(
+      this.fileUploadService
+    );
 
     router.post(
       "/single",

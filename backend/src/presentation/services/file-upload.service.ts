@@ -1,8 +1,9 @@
 import { ConvertCsvToJsonAdapter } from "../../config";
+import { UsersService } from "./users.service";
 
 export class FileUploadService {
   /* nuestro constructor será para poder hacer la inyección de dependencias en caso se necesite */
-  constructor() {}
+  constructor(private readonly usersService: UsersService) {}
 
   public async uploadSingleFile(file: Express.Multer.File | undefined) {
     // console.log({ file });
@@ -37,6 +38,8 @@ export class FileUploadService {
       const dataCsvToJson =
         ConvertCsvToJsonAdapter.csvStringToJson(dataBufferToCsv);
       // console.log({ dataCsvToJson });
+
+      this.usersService.usersData = dataCsvToJson;
 
       return {
         propsFile: { fieldname, originalname, mimetype },
