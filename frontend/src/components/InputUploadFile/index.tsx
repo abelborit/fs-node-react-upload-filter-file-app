@@ -1,9 +1,14 @@
 import { APP_STATUS, AppStatusType, BUTTON_TEXT } from "../../constants";
+import { FileDataResponseInterface } from "../../interfaces/FileDataResponse.interface";
 import { fileUploadService } from "../../services/file-upload.service";
+import { toast } from "sonner";
 
 interface InputUploadFileProps {
   setFile: React.Dispatch<React.SetStateAction<File>>;
   setAppStatus: React.Dispatch<React.SetStateAction<AppStatusType>>;
+  setDataResponse: React.Dispatch<
+    React.SetStateAction<FileDataResponseInterface>
+  >;
 
   appStatus: AppStatusType;
   file: File;
@@ -12,6 +17,7 @@ interface InputUploadFileProps {
 export const InputUploadFile = ({
   setFile,
   setAppStatus,
+  setDataResponse,
 
   appStatus,
   file,
@@ -41,8 +47,18 @@ export const InputUploadFile = ({
     event.preventDefault();
     setAppStatus(APP_STATUS.UPLOADING);
 
-    const [errorResponse, dataResponse] = await fileUploadService(file);
-    console.log([errorResponse, dataResponse]);
+    const [dataResponse, errorResponse] = await fileUploadService(file);
+    // console.log([errorResponse, dataResponse]);
+
+    if (errorResponse) {
+      setAppStatus(APP_STATUS.ERROR);
+      toast.error(errorResponse.message);
+      return;
+    }
+
+    setAppStatus(APP_STATUS.READY_TO_USAGE);
+    setDataResponse(dataResponse);
+    toast.success("File Uploated Successfully");
   };
 
   return (

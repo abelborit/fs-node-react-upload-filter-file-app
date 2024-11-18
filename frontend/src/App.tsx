@@ -3,14 +3,22 @@ import "./App.css";
 import { FileCharacteristics } from "./components/FileCharacteristics";
 import { InputUploadFile } from "./components/InputUploadFile";
 import { APP_STATUS, AppStatusType } from "./constants";
+import { FileDataResponseInterface } from "./interfaces/FileDataResponse.interface";
+import { Toaster } from "sonner";
 
 function App() {
   const [appStatus, setAppStatus] = useState<AppStatusType>(APP_STATUS.INIT);
   const [file, setFile] = useState({} as File);
+  const [dataResponse, setDataResponse] = useState(
+    {} as FileDataResponseInterface
+  );
+  console.log(dataResponse);
 
   return (
     <>
       <h1>FullStack Project: Upload CSV + Search</h1>
+
+      <Toaster />
 
       <div
         style={{
@@ -25,6 +33,7 @@ function App() {
         <InputUploadFile
           setFile={setFile}
           setAppStatus={setAppStatus}
+          setDataResponse={setDataResponse}
           appStatus={appStatus}
           file={file}
         />
