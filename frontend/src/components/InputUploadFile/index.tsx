@@ -1,4 +1,14 @@
-export const InputUploadFile = () => {
+import { FileCharacteristicsInterface } from "../../interfaces/FileCharacteristicsInterface";
+
+interface InputUploadFileProps {
+  setFileCharacteristics: React.Dispatch<
+    React.SetStateAction<FileCharacteristicsInterface>
+  >;
+}
+
+export const InputUploadFile = ({
+  setFileCharacteristics,
+}: InputUploadFileProps) => {
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // console.log(event);
     // console.log(event.target.files);
@@ -8,8 +18,11 @@ export const InputUploadFile = () => {
     // console.log(file);
 
     /* FORMA 2 */
-    const file = event.target.files?.[0] || {};
+    const file =
+      event.target.files?.[0] || ({} as FileCharacteristicsInterface);
     console.log(file);
+
+    setFileCharacteristics(file);
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -18,7 +31,16 @@ export const InputUploadFile = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      onSubmit={handleSubmit}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "1.5rem",
+      }}
+    >
       {/* se coloca el name con "file" porque es el mismo nombre que se espera recibir en el backend */}
       <label>
         <input
