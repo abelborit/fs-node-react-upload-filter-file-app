@@ -36,6 +36,8 @@
 
     - Para los tipos `npm i --save-dev @types/cors`
 
+- Paquete `sonner` usando `npm install sonner` desde `https://sonner.emilkowal.ski/`
+
 ### \* NOTAS:
 
 - ejemplo
