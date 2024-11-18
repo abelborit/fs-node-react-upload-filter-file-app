@@ -13,7 +13,7 @@ function App() {
   const [dataResponse, setDataResponse] = useState(
     {} as FileDataResponseInterface
   );
-  console.log(dataResponse);
+  // console.log(dataResponse);
 
   return (
     <>

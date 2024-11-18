@@ -29,7 +29,7 @@ export const UsersTable = ({ dataResponse }: UsersTableProps) => {
 
         <tbody>
           {dataResponse.data.dataFile.map((element) => (
-            <tr id={element.id + element.nombre + element.apellido}>
+            <tr key={element.id + element.nombre + element.apellido}>
               <td style={cellStyle}>{element.id}</td>
               <td style={cellStyle}>{element.nombre}</td>
               <td style={cellStyle}>{element.apellido}</td>
