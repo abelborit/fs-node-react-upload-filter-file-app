@@ -5,6 +5,7 @@ import { InputUploadFile } from "./components/InputUploadFile";
 import { APP_STATUS, AppStatusType } from "./constants";
 import { FileDataResponseInterface } from "./interfaces/FileDataResponse.interface";
 import { Toaster } from "sonner";
+import { UsersTable } from "./components/UsersInfoTable";
 
 function App() {
   const [appStatus, setAppStatus] = useState<AppStatusType>(APP_STATUS.INIT);
@@ -23,6 +24,7 @@ function App() {
       <div
         style={{
           display: "flex",
+          flexDirection: "column",
           border: "2px solid #fff",
           borderRadius: "20px",
           padding: "2.5rem 1.5rem",
@@ -30,15 +32,31 @@ function App() {
           justifyContent: "space-evenly",
         }}
       >
-        <InputUploadFile
-          setFile={setFile}
-          setAppStatus={setAppStatus}
-          setDataResponse={setDataResponse}
-          appStatus={appStatus}
-          file={file}
-        />
+        {appStatus === APP_STATUS.READY_TO_USAGE ? (
+          <FileCharacteristics file={file} appStatus={appStatus} />
+        ) : (
+          <InputUploadFile
+            setFile={setFile}
+            setAppStatus={setAppStatus}
+            setDataResponse={setDataResponse}
+            appStatus={appStatus}
+            file={file}
+          />
+        )}
 
-        <FileCharacteristics file={file} appStatus={appStatus} />
+        {appStatus === APP_STATUS.READY_TO_USAGE ? (
+          <div
+            style={{
+              borderBottom: "1px solid #fff",
+              width: "90%",
+              margin: "2rem auto",
+            }}
+          />
+        ) : null}
+
+        {appStatus === APP_STATUS.READY_TO_USAGE ? (
+          <UsersTable dataResponse={dataResponse} />
+        ) : null}
       </div>
     </>
   );
