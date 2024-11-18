@@ -3,11 +3,11 @@ import "./App.css";
 import { FileCharacteristics } from "./components/FileCharacteristics";
 import { InputUploadFile } from "./components/InputUploadFile";
 import { FileCharacteristicsInterface } from "./interfaces/FileCharacteristicsInterface";
+import { APP_STATUS, AppStatusType } from "./constants";
 
 function App() {
-  const [file, setFile] = useState(
-    {} as FileCharacteristicsInterface
-  );
+  const [appStatus, setAppStatus] = useState<AppStatusType>(APP_STATUS.INIT);
+  const [file, setFile] = useState({} as FileCharacteristicsInterface);
 
   return (
     <>
@@ -18,14 +18,18 @@ function App() {
           display: "flex",
           border: "2px solid #fff",
           borderRadius: "20px",
-          padding: "1rem",
+          padding: "2.5rem 1.5rem",
           textAlign: "center",
           justifyContent: "space-evenly",
         }}
       >
-        <InputUploadFile setFile={setFile} />
+        <InputUploadFile
+          setFile={setFile}
+          setAppStatus={setAppStatus}
+          appStatus={appStatus}
+        />
 
-        <FileCharacteristics file={file} />
+        <FileCharacteristics file={file} appStatus={appStatus} />
       </div>
     </>
   );
