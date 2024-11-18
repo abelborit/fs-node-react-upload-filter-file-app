@@ -32,7 +32,9 @@
 
 - Paquete `convert-csv-to-json` usando `npm i convert-csv-to-json` desde `https://www.npmjs.com/package/convert-csv-to-json`
 
-- Paquete `nombre_paquete` usando `comando_paquete` desde `url_paquete`
+- Paquete `cors` usando `npm i cors` desde `https://www.npmjs.com/package/cors`
+
+    - Para los tipos `npm i --save-dev @types/cors`
 
 ### \* NOTAS:
 
