@@ -1,8 +1,9 @@
 // import csvToJson from "convert-csv-to-json";
 
 export const ConvertCsvToJsonAdapter = {
+  /* se está colocando el delimitador que, según la librería, el valor por defecto que usa es ";" */
   // csvStringToJson: (csvString: string) => {
-  //   return csvToJson.csvStringToJson(csvString);
+  //   return csvToJson.fieldDelimiter(",").csvStringToJson(csvString);
   // },
 
   /* lo haremos de forma manual porque hacerlo con la librería no nos da en formato JSON, queda como deuda téncina ver cómo funciona la librería y qué configuración adicional hay que hacer para hacer la conversión correcta */
