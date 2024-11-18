@@ -9,11 +9,36 @@ export class UsersController {
     /* se coloca el -- as { q: string | undefined } -- para que tenga un tipado y no salga un error similar a -- error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'. Type 'undefined' is not assignable to type 'string'. -- */
     const { q } = request.query as { q: string | undefined };
 
-    this.usersService.getUsers(q).then((queryParameterAndData) => {
-      response.status(200).json({
-        data: queryParameterAndData,
-        message: "users obtained successfully",
+    return this.usersService
+      .getFilteredUsers(q)
+      .then((queryParameterAndData) => {
+        // console.log({ queryParameterAndData });
+
+        response.status(200).json({
+          data: queryParameterAndData,
+          message: "users obtained successfully",
+        });
+      })
+      .catch((error) => {
+        // console.log({ error });
+
+        switch (error.message) {
+          case "query param is required":
+            return response
+              .status(404)
+              .json({ data: [], message: "query param is required" });
+
+          case "No data available. Please upload the file first":
+            return response.status(400).json({
+              data: [],
+              message: "No data available. Please upload the file first",
+            });
+
+          default:
+            return response
+              .status(500)
+              .json({ data: null, message: "Internal Server Error" });
+        }
       });
-    });
   };
 }
