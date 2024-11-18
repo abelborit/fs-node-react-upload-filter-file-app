@@ -1,13 +1,13 @@
 import { FileCharacteristicsInterface } from "../../interfaces/FileCharacteristicsInterface";
 
 interface FileCharacteristicsProps {
-  fileCharacteristics: FileCharacteristicsInterface;
+  file: FileCharacteristicsInterface;
 }
 
 export const FileCharacteristics = ({
-  fileCharacteristics,
+  file,
 }: FileCharacteristicsProps) => {
-  // console.log(fileCharacteristics);
+  // console.log(file);
 
   return (
     <div
@@ -19,26 +19,26 @@ export const FileCharacteristics = ({
         gap: "1rem",
       }}
     >
-      {fileCharacteristics.name ? (
+      {file.name ? (
         <>
           <p style={{ padding: "0px", margin: "0px" }}>
             <span style={{ fontWeight: "bold" }}>Name File: </span>
             <span>
-              {fileCharacteristics.name || "No file selected to upload"}
+              {file.name || "No file selected to upload"}
             </span>
           </p>
 
           <p style={{ padding: "0px", margin: "0px" }}>
             <span style={{ fontWeight: "bold" }}>Size File: </span>
             <span>
-              {fileCharacteristics.size || "No file selected to upload"}
+              {file.size || "No file selected to upload"}
             </span>
           </p>
 
           <p style={{ padding: "0px", margin: "0px" }}>
             <span style={{ fontWeight: "bold" }}>Type File: </span>
             <span>
-              {fileCharacteristics.type || "No file selected to upload"}
+              {file.type || "No file selected to upload"}
             </span>
           </p>
         </>

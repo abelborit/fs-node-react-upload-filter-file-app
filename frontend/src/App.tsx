@@ -5,7 +5,7 @@ import { InputUploadFile } from "./components/InputUploadFile";
 import { FileCharacteristicsInterface } from "./interfaces/FileCharacteristicsInterface";
 
 function App() {
-  const [fileCharacteristics, setFileCharacteristics] = useState(
+  const [file, setFile] = useState(
     {} as FileCharacteristicsInterface
   );
 
@@ -23,9 +23,9 @@ function App() {
           justifyContent: "space-evenly",
         }}
       >
-        <InputUploadFile setFileCharacteristics={setFileCharacteristics} />
+        <InputUploadFile setFile={setFile} />
 
-        <FileCharacteristics fileCharacteristics={fileCharacteristics} />
+        <FileCharacteristics file={file} />
       </div>
     </>
   );

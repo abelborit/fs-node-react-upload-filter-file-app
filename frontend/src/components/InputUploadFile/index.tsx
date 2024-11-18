@@ -1,13 +1,13 @@
 import { FileCharacteristicsInterface } from "../../interfaces/FileCharacteristicsInterface";
 
 interface InputUploadFileProps {
-  setFileCharacteristics: React.Dispatch<
+  setFile: React.Dispatch<
     React.SetStateAction<FileCharacteristicsInterface>
   >;
 }
 
 export const InputUploadFile = ({
-  setFileCharacteristics,
+  setFile,
 }: InputUploadFileProps) => {
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // console.log(event);
@@ -20,9 +20,9 @@ export const InputUploadFile = ({
     /* FORMA 2 */
     const file =
       event.target.files?.[0] || ({} as FileCharacteristicsInterface);
-    console.log(file);
+    // console.log(file);
 
-    setFileCharacteristics(file);
+    setFile(file);
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
