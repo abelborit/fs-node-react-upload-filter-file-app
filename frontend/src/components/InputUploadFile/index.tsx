@@ -1,11 +1,12 @@
 import { APP_STATUS, AppStatusType, BUTTON_TEXT } from "../../constants";
-import { FileCharacteristicsInterface } from "../../interfaces/FileCharacteristicsInterface";
+import { fileUploadService } from "../../services/file-upload.service";
 
 interface InputUploadFileProps {
-  setFile: React.Dispatch<React.SetStateAction<FileCharacteristicsInterface>>;
+  setFile: React.Dispatch<React.SetStateAction<File>>;
   setAppStatus: React.Dispatch<React.SetStateAction<AppStatusType>>;
 
   appStatus: AppStatusType;
+  file: File;
 }
 
 export const InputUploadFile = ({
@@ -13,6 +14,7 @@ export const InputUploadFile = ({
   setAppStatus,
 
   appStatus,
+  file,
 }: InputUploadFileProps) => {
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // console.log(event);
@@ -23,8 +25,7 @@ export const InputUploadFile = ({
     // console.log(file);
 
     /* FORMA 2 */
-    const file =
-      event.target.files?.[0] || ({} as FileCharacteristicsInterface);
+    const file = event.target.files?.[0] || ({} as File);
     // console.log(file);
 
     if (!file) {
@@ -35,10 +36,13 @@ export const InputUploadFile = ({
     setAppStatus(APP_STATUS.READY_TO_UPLOAD);
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     // console.log(event);
     event.preventDefault();
     setAppStatus(APP_STATUS.UPLOADING);
+
+    const [errorResponse, dataResponse] = await fileUploadService(file);
+    console.log([errorResponse, dataResponse]);
   };
 
   return (

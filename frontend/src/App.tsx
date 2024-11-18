@@ -2,12 +2,11 @@ import { useState } from "react";
 import "./App.css";
 import { FileCharacteristics } from "./components/FileCharacteristics";
 import { InputUploadFile } from "./components/InputUploadFile";
-import { FileCharacteristicsInterface } from "./interfaces/FileCharacteristicsInterface";
 import { APP_STATUS, AppStatusType } from "./constants";
 
 function App() {
   const [appStatus, setAppStatus] = useState<AppStatusType>(APP_STATUS.INIT);
-  const [file, setFile] = useState({} as FileCharacteristicsInterface);
+  const [file, setFile] = useState({} as File);
 
   return (
     <>
@@ -27,6 +26,7 @@ function App() {
           setFile={setFile}
           setAppStatus={setAppStatus}
           appStatus={appStatus}
+          file={file}
         />
 
         <FileCharacteristics file={file} appStatus={appStatus} />
