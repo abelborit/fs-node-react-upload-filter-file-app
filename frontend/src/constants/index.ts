@@ -8,3 +8,11 @@ export const APP_STATUS = {
 } as const;
 
 export type AppStatusType = (typeof APP_STATUS)[keyof typeof APP_STATUS];
+
+export const BUTTON_TEXT = {
+  [APP_STATUS.INIT]: "Upload File",
+  [APP_STATUS.ERROR]: "Try Again",
+  [APP_STATUS.READY_TO_UPLOAD]: "Upload File",
+  [APP_STATUS.UPLOADING]: "Uploading...",
+  [APP_STATUS.READY_TO_USAGE]: "File uploated",
+};
