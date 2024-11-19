@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "a247bd37-dfcb-464e-b9cd-3596264a85a6",
+		"name": "FS Node React - Upload and Filter File",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25203359"
+	},
+	"item": [
+		{
+			"name": "Upload File - Single",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Lenovo/Desktop/database_local.csv"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Lenovo/Desktop/images-test.jpg",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/upload/single",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"upload",
+						"single"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users?q=Hern",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Hern"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
