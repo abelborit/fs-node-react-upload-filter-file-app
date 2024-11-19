@@ -48,7 +48,7 @@ export const InputUploadFile = ({
     setAppStatus(APP_STATUS.UPLOADING);
 
     const [dataResponse, errorResponse] = await fileUploadService(file);
-    // console.log([errorResponse, dataResponse]);
+    // console.log([dataResponse, errorResponse]);
 
     if (errorResponse) {
       setAppStatus(APP_STATUS.ERROR);

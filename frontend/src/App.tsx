@@ -1,11 +1,12 @@
 import { useState } from "react";
-import "./App.css";
 import { FileCharacteristics } from "./components/FileCharacteristics";
 import { InputUploadFile } from "./components/InputUploadFile";
 import { APP_STATUS, AppStatusType } from "./constants";
 import { FileDataResponseInterface } from "./interfaces/FileDataResponse.interface";
 import { Toaster } from "sonner";
 import { UsersTable } from "./components/UsersInfoTable";
+
+import "./App.css";
 
 function App() {
   const [appStatus, setAppStatus] = useState<AppStatusType>(APP_STATUS.INIT);
@@ -54,8 +55,8 @@ function App() {
           />
         ) : null}
 
-        {appStatus === APP_STATUS.READY_TO_USAGE ? (
-          <UsersTable dataResponse={dataResponse} />
+        {dataResponse?.data?.dataFile?.length > 0 ? (
+          <UsersTable dataResponse={dataResponse} setAppStatus={setAppStatus} />
         ) : null}
       </div>
     </>
