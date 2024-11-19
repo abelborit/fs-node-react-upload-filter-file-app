@@ -1,0 +1,16 @@
+{
+  "name": "fs-node-react-upload-filter-file-app",
+  "version": "1.0.0",
+  "description": "---",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:frontend": "npm run dev --workspace frontend",
+    "dev:backend": "npm run dev --workspace backend",
+    "dev": "start npm run dev:frontend && start npm run dev:backend"
+  },
+  "keywords": [],
+  "license": "ISC"
+}
