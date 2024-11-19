@@ -97,31 +97,35 @@ export const UsersTable = ({ dataResponse, setAppStatus }: UsersTableProps) => {
         value={searchQuery}
       />
 
-      <table>
-        <thead>
-          <tr>
-            <th style={headerStyle}>ID</th>
-            <th style={headerStyle}>Name</th>
-            <th style={headerStyle}>Lastname</th>
-            <th style={headerStyle}>Age</th>
-            <th style={headerStyle}>Department</th>
-            <th style={headerStyle}>Email</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {data.map((element) => (
-            <tr key={element.id + element.nombre + element.apellido}>
-              <td style={cellStyle}>{element.id}</td>
-              <td style={cellStyle}>{element.nombre}</td>
-              <td style={cellStyle}>{element.apellido}</td>
-              <td style={cellStyle}>{element.edad}</td>
-              <td style={cellStyle}>{element.departamento}</td>
-              <td style={cellStyle}>{element.email}</td>
+      {data.length === 0 ? (
+        <p style={{ fontSize: "24px" }}>No users found ❌</p>
+      ) : (
+        <table>
+          <thead>
+            <tr>
+              <th style={headerStyle}>ID</th>
+              <th style={headerStyle}>Name</th>
+              <th style={headerStyle}>Lastname</th>
+              <th style={headerStyle}>Age</th>
+              <th style={headerStyle}>Department</th>
+              <th style={headerStyle}>Email</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+
+          <tbody>
+            {data.map((element) => (
+              <tr key={element.id + element.nombre + element.apellido}>
+                <td style={cellStyle}>{element.id}</td>
+                <td style={cellStyle}>{element.nombre}</td>
+                <td style={cellStyle}>{element.apellido}</td>
+                <td style={cellStyle}>{element.edad}</td>
+                <td style={cellStyle}>{element.departamento}</td>
+                <td style={cellStyle}>{element.email}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 };
