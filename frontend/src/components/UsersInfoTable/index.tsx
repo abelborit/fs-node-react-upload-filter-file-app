@@ -21,12 +21,12 @@ export const UsersTable = ({ dataResponse, setAppStatus }: UsersTableProps) => {
 
   const debouncedQuery = useDebounce(searchQuery, 300); // 300 ms de debounce
 
-  const handleSearch = async (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     // console.log(event);
     setSearchQuery(event.target.value);
   };
 
-  /* FORMA 1 */
+  /* FORMA 1: usando if(....) */
   // useEffect(() => {
   //   if (searchQuery === "") {
   //     window.history.pushState({}, "", window.location.pathname);
@@ -36,7 +36,7 @@ export const UsersTable = ({ dataResponse, setAppStatus }: UsersTableProps) => {
   //   window.history.pushState({}, "", `?=${searchQuery}`);
   // }, [searchQuery]);
 
-  /* FORMA 2 */
+  /* FORMA 2: usando operador ternario directamente */
   useEffect(() => {
     /* Ventajas de Este Enfoque:
         - Sin Recarga de Página: La URL cambia dinámicamente sin necesidad de recargar la página.
