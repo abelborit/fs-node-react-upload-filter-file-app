@@ -1,10 +1,11 @@
+import { envs } from "../config/envs.plugin";
 import { FileDataSearchedInterface } from "../interfaces/FileDataSearched.interface";
 
 export const searchUserService = async (
   query: string
 ): Promise<[FileDataSearchedInterface, Error?]> => {
   try {
-    const response = await fetch(`http://localhost:3000/api/users?q=${query}`, {
+    const response = await fetch(`${envs.VITE_API_HOST}/users?q=${query}`, {
       method: "GET",
     });
 

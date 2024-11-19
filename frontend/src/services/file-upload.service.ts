@@ -1,3 +1,4 @@
+import { envs } from "../config/envs.plugin";
 import { FileDataResponseInterface } from "../interfaces/FileDataResponse.interface";
 
 /* lo que regresaremos será un tupla para tener el error y la data en caso haya uno o el otro. Tener en cuenta que TypeScript no permite que un elemento obligatorio venga después de un elemento opcional en una tupla. En una tupla, los elementos opcionales deben ir al final */
@@ -8,7 +9,7 @@ export const fileUploadService = async (
   formData.append("file", file);
 
   try {
-    const response = await fetch("http://localhost:3000/api/upload/single", {
+    const response = await fetch(`${envs.VITE_API_HOST}/upload/single`, {
       method: "POST",
       body: formData, // Enviar el archivo con FormData
     });
