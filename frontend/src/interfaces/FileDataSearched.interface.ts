@@ -3,16 +3,24 @@ export interface FileDataSearchedInterface {
   message: string;
 }
 
-export interface Data {
+interface Data {
   query: string;
-  filteredData: FilteredDatum[];
+  filteredData: DataFile[];
 }
 
-export interface FilteredDatum {
+interface DataFile {
   id: string;
   nombre: string;
   apellido: string;
   edad: string;
-  departamento: string;
+  departamento: Departament;
   email: string;
+}
+
+enum Departament {
+  Administración = "Administración",
+  Desarrollo = "Desarrollo",
+  Marketing = "Marketing",
+  RecursosHumanos = "Recursos Humanos",
+  Ventas = "Ventas",
 }
