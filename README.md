@@ -1,4 +1,4 @@
-# FullStack Project
+# FullStack Project (Node & React) - Upload and Filter File App
 
 ---
 
